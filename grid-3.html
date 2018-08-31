@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            grid-template-rows: 100px 300px 100px;
+            grid-gap: 10px;
+
+        }
+
+
+        .item {
+            border: 1px solid #000;
+            background-color: aqua;
+        }
+
+        .item-a {
+            grid-column-start: 1;
+            grid-column-end: span 5;
+            background-color: orange;
+
+        }
+
+        .item-b {
+            grid-column-start: 1;
+            grid-column-end: span 5;
+            background-color: green;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+
+        }
+
+        .item-c {
+            grid-column-start: 1;
+            grid-column-end: span 5;
+            background: yellow;
+
+        }
+
+        .item-d {
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-a">A</div>
+        <div class="item item-b">
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+        </div>
+        <div class="item item-c">C</div>
+    </div>
+</body>
+
+</html>
