@@ -8,7 +8,43 @@
 </head>
 
 <style>
+    img {
+        width: 50%;
 
+
+    }
+
+    article {
+        clear: both;
+        border: 2px solid black;
+
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+    }
+
+
+    @media screen and (min-width:480px) {
+        section {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        @media screen and (min-width:700px) {
+            section {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            @media screen and (min-width:1200px) {
+                section {
+                    grid-template-columns: repeat(3, 1fr);
+
+                }
 
 </style>
 
